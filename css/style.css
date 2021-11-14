@@ -124,8 +124,8 @@ img {
   align-items: center;
   font-size: 18px;
   line-height: 30px;
-  margin-bottom: 24px;
-  padding: 3px 0;
+  margin-bottom: 4px;
+  padding: 13px 17px;
 }
 .menu ul .img-svg {
   margin-right: 12px;
@@ -152,6 +152,15 @@ img {
   border-right: 4px solid #17023b;
   height: 100%;
   border-radius: 25px;
+}
+.menu ul li:hover {
+  background: #f4f7fe;
+  padding: 13px 17px;
+  border-radius: 10px;
+  margin-right: 9px;
+}
+.menu ul .active:hover::after {
+  right: -9px;
 }
 .logo {
   display: flex;
@@ -245,6 +254,16 @@ img {
 }
 .bell {
   position: relative;
+  z-index: 2;
+}
+.bell:hover {
+  border-radius: 10px;
+  padding: 11px;
+  background: rgb(255 255 255 / 70%);
+  margin-right: 14px;
+}
+.bell:hover img {
+  margin-right: 0;
 }
 .message {
   display: none;
@@ -253,12 +272,15 @@ img {
   background: #ffffff;
   position: absolute;
   width: max-content;
-  left: -24px;
-  top: 47px;
   border-radius: 6px;
   box-shadow: 0px 0px 1px rgba(112, 144, 176, 0.31),
     0px 12px 24px rgba(112, 144, 176, 0.15);
   z-index: 2;
+  left: -13px;
+  top: 56px;
+}
+.bell:hover .message {
+  display: block;
 }
 .message::before {
   content: "";
@@ -301,6 +323,9 @@ img {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   margin-bottom: 56px;
+}
+.my-courses .wrap a:hover {
+  box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
 }
 .my-courses h1 {
   font-weight: 600;
@@ -367,6 +392,9 @@ img {
   background: #ffffff;
   text-align: center;
   border-radius: 10px;
+}
+.o_course_b:hover {
+  box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
 }
 .o_course_b a {
   color: #a8a2b2;
@@ -452,6 +480,7 @@ img {
 }
 .btn-gradient:hover {
   color: #ffffff;
+  background: #68033d;
 }
 .cp-course .btn-gradient {
   font-weight: 600;
@@ -554,6 +583,9 @@ img {
   max-width: 253px;
   position: relative;
   overflow: hidden;
+}
+.lesson__b:hover {
+  box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
 }
 .lesson__txt {
   padding: 24px 58px 24px 24px;
@@ -712,6 +744,16 @@ img {
 .button-group a:last-child {
   margin-right: 0;
 }
+.button-group .btn-simple:nth-child(2):hover {
+  background: #17023b;
+  color: #ffffff;
+}
+.button-group .btn-simple:nth-child(3):hover {
+  background: #17023b;
+  color: #17023b;
+  background: #dfdfe8;
+  border: 1px solid #d1cdd7;
+}
 /* lesson-page end */
 /* vocabulary */
 .vocabulary {
@@ -845,6 +887,9 @@ img {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
 }
+.record__wrap a:hover {
+  box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
+}
 .record__b {
   background: #ffffff;
   border-radius: 10px;
@@ -875,6 +920,96 @@ img {
   line-height: 130%;
 }
 /* record end */
+.record-theme__b {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+}
+.record-theme__b {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 130%;
+  position: relative;
+}
+.record-theme__course {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #f4f7fe;
+}
+.record-theme__lesson {
+  margin-bottom: 12px;
+  font-size: 17.5px;
+  line-height: 130%;
+  padding-left: 45px;
+  position: relative;
+}
+.record-theme__lesson::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: url(../img/note.png) no-repeat 50% 50%;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.record-theme__txt {
+  max-width: 880px;
+  font-size: 16px;
+  line-height: 130%;
+}
+/* table */
+.table {
+  padding: 24px 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 24px;
+}
+.table__box {
+  display: grid;
+  grid-template-columns: 50px 120px 550px 60px 50px;
+  align-items: center;
+  justify-content: space-between;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  font-size: 16px;
+  line-height: 150%;
+}
+.table__img img {
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+}
+.table__info {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f4f7fe;
+  text-transform: uppercase;
+  color: #8e8ea1;
+  font-size: 12px;
+  line-height: 150%;
+}
+.table__action {
+  font-size: 0;
+  position: relative;
+}
+.table__action::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../img/svg/DotsThreeVertical.svg) no-repeat 50% 50%;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* table end */
 
 /* mobile */
 @media only screen and (max-width: 1439px) {
@@ -897,7 +1032,7 @@ img {
     display: flex;
     padding-bottom: 24px;
   }
-  .course {
+  .my-courses .wrap a {
     max-width: 498px;
     flex: none;
   }
@@ -1032,6 +1167,7 @@ img {
   .user {
     padding: 0;
     margin: unset;
+    border: none;
   }
   .user img {
     width: 32px;
@@ -1120,6 +1256,16 @@ img {
   }
   .menu ul li {
     padding-left: 36px;
+  }
+  .menu ul li:hover {
+    padding: 13px 17px;
+    padding-left: 27px;
+    margin-right: 0;
+    margin-left: 9px;
+  }
+  .menu ul .active:hover::after {
+    right: unset;
+    left: -9px;
   }
 
   .input-search {
@@ -1211,6 +1357,25 @@ img {
   }
   .faq {
     padding: 24px;
+  }
+  /* .bell {
+    pointer-events: none;
+  } */
+  .bell:hover {
+    border-radius: unset;
+    padding: 0;
+    background: none;
+    margin-right: unset;
+  }
+  .bell:hover img {
+    margin-right: 24px;
+  }
+  .message {
+    left: -213px;
+    top: 61px;
+  }
+  .message::after {
+    left: 216px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1454,6 +1619,9 @@ img {
   .menu ul a:last-child li {
     margin-bottom: 51px;
   }
+  .message {
+    top: 53px;
+  }
 }
 @media only screen and (max-width: 479px) {
   .cp-course__progress {
@@ -1486,6 +1654,13 @@ img {
   }
   .record__course {
     font-size: 16px;
+  }
+  .record-theme__lesson {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .record-theme__b {
+    padding: 16px;
   }
 }
 @media only screen and (max-width: 320px) {
